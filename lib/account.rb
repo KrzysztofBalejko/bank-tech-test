@@ -12,7 +12,7 @@ class Account
 
   def deposit(monies)
     @balance += monies
-    @transactions << [date, monies," ", @balance]
+    @transactions << [date, monies, " ", @balance]
   end
 
   def withdraw(monies)
@@ -20,7 +20,7 @@ class Account
       fail 'Insufficient funds'
     else
       @balance -= monies
-      @transactions << [date," ", monies, @balance]
+      @transactions << [date, " ", monies, @balance]
     end
   end
 

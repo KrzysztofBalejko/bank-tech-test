@@ -1,7 +1,7 @@
 require './lib/statement'
 
 RSpec.describe 'Statement' do
-  let(:my_account) { instance_double('Account', transactions: [["11/03/2019", 100," ", 100]]) }
+  let(:my_account) { instance_double('Account', transactions: [["11/03/2019", 100, " ", 100]]) }
   let(:my_statement) { Statement.new(my_account.transactions) }
 
   it 'prints a statement in a specific format' do
