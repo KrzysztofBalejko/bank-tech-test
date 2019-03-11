@@ -57,12 +57,21 @@ date || credit || debit || balance
 
 **To run the program please follow below steps:**
 
-* Open bash terminal
-* Install Ruby
+* Fork or clone this repository
+```
+git clone https://github.com/KrzysztofBalejko/bank-tech-test.git
+```
+* Open bash terminal, go to the file location
+* Run bundle install
 * type 'irb'
 * follow below:
 
 ![User interation](images/interaction.png)
+
+**How to test it?**
+
+* Open bash terminal, go to the file location
+* type 'rspec' and press enter
 
 **Diagram of interaction:**
 
