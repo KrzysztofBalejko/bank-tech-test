@@ -1,7 +1,7 @@
 module Converter
 
   def convert(list)
-    list.each do |element|
+    list.reverse.each do |element|
       puts element.join(",").gsub!(",", " || ")
     end
   end
