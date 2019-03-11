@@ -12,9 +12,20 @@ RSpec.describe 'Account' do
     expect { my_account.deposit(monies) }.to change { my_account.balance }.by 100
   end
 
-  it 'user can withdraw monies' do
-    my_account.deposit(monies)
-    expect { my_account.withdraw(monies) }.to change { my_account.balance }.by(-100) 
+  context 'money withdrawals' do
+
+    it 'user can withdraw monies' do
+      my_account.deposit(monies)
+      expect { my_account.withdraw(monies) }.to change { my_account.balance }.by(-100)
+    end
+
+    it "user cannot withdraw if the balance is less then the requested amount" do
+      my_account.deposit(monies)
+      my_account.withdraw(50)
+      expect { my_account.withdraw(monies) }.to raise_error 'Insufficient funds'
+    end
+
   end
+
 
 end
