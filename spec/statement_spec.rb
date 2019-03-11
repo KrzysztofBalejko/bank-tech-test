@@ -1,16 +1,13 @@
 require './lib/statement'
-require './lib/account'
 
 RSpec.describe 'Statement' do
-  let(:my_account) { Account.new(0) }
+  let(:my_account) { instance_double('Account', transactions: [["11/03/2019", 100," ", 100]]) }
+  let(:my_statement) { Statement.new(my_account.transactions) }
 
   it 'prints a statement in a specific format' do
-    my_account.deposit(100)
-    list = my_account.transactions
-    my_statement = Statement.new(list)
-    my_statement.print(list)
+    my_statement.print(my_account.transactions)
     expect output('date || credit || debit || balance
-  11/03/2019 || 100 || 0 || 100').to_stdout
+  11/03/2019 || 100 ||  || 100').to_stdout
   end
 
 end
