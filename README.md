@@ -66,7 +66,7 @@ git clone https://github.com/KrzysztofBalejko/bank-tech-test.git
 * type 'irb'
 * follow below:
 
-![User interation](images/interaction2.png)
+![User interation](images/interaction3.png)
 
 **How to test it?**
 
