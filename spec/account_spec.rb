@@ -4,7 +4,7 @@ RSpec.describe 'Account' do
   let(:my_account) { Account.new(0) }
   let(:monies) { 100 }
   let(:day) { '11/03/2019' }
-  let(:default) { 0 }
+  let(:default) { " " }
 
   it 'user can access the account' do
     expect(my_account.balance).to eq 0
