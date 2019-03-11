@@ -11,7 +11,11 @@ class Account
   end
 
   def withdraw(monies)
-    @balance -= monies
+    if @balance < monies
+      fail 'Insufficient funds'
+    else
+      @balance -= monies
+    end
   end
 
 end
