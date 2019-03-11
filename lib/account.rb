@@ -20,6 +20,7 @@ class Account
       fail 'Insufficient funds'
     else
       @balance -= monies
+      @transactions << [date, 0, monies, @balance]
     end
   end
 
