@@ -1,4 +1,4 @@
-require 'date_stamp_module'
+require_relative 'date_stamp_module'
 
 class Account
 
