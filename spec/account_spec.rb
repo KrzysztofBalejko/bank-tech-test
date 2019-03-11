@@ -12,4 +12,9 @@ RSpec.describe 'Account' do
     expect { my_account.deposit(monies) }.to change { my_account.balance }.by 100
   end
 
+  it 'user can withdraw monies' do
+    my_account.deposit(monies)
+    expect { my_account.withdraw(monies) }.to change { my_account.balance }.by(-100) 
+  end
+
 end
