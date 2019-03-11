@@ -57,4 +57,13 @@ date || credit || debit || balance
 
 **To run the program please follow below steps:**
 
-* TBA..
+* Open bash terminal
+* Install Ruby
+* type 'irb'
+* follow below:
+
+![User interation](images/interaction.png)
+
+**Diagram of interaction:**
+
+![Diagram](images/diagram3.png)
