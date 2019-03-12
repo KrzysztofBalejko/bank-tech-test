@@ -16,12 +16,10 @@ class Account
   end
 
   def withdraw(monies)
-    if @balance < monies
-      fail 'Insufficient funds'
-    else
-      @balance -= monies
-      @transactions << [date, " ", monies, @balance]
-    end
+    fail 'Insufficient funds' if @balance < monies
+    
+    @balance -= monies
+    @transactions << [date, " ", monies, @balance]
   end
 
 end
