@@ -12,14 +12,14 @@ class Account
 
   def deposit(monies)
     @balance += monies
-    @transactions << [date, monies, " ", @balance]
+    @transactions << [date, format('%.2f',monies), " ", format('%.2f',@balance)]
   end
 
   def withdraw(monies)
     fail 'Insufficient funds' if @balance < monies
-    
+
     @balance -= monies
-    @transactions << [date, " ", monies, @balance]
+    @transactions << [date, " ", format('%.2f',monies), format('%.2f',@balance)]
   end
 
 end
