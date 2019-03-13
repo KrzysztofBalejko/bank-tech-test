@@ -34,14 +34,14 @@ RSpec.describe 'Account' do
     it 'upon deposit date, credit, debit amount and balance are recorded' do
       allow(my_account).to receive(:date).and_return(day)
       my_account.deposit(monies)
-      expect(my_account.transactions[0]).to include(day, monies, default, my_account.balance)
+      expect(my_account.transactions[0]).to include(day, "100.00", default, "#{format('%.2f',my_account.balance)}")
     end
 
     it "upon withdrawals date, credit, debit amount and balance are recorded" do
       allow(my_account).to receive(:date).and_return(day)
       my_account.deposit(50)
       my_account.withdraw(25)
-      expect(my_account.transactions[1]).to include(day, default, 25, my_account.balance)
+      expect(my_account.transactions[1]).to include(day, default, "25.00", "#{format('%.2f',my_account.balance)}")
     end
 
   end

@@ -13,9 +13,9 @@ RSpec.describe 'User interaction' do
     my_statement = Statement.new(my_account.transactions)
     my_statement.print(my_account.transactions)
     expect output('date || credit || debit || balance
-  13/03/2019 ||  || 500 || 2500
-  13/03/2019 || 2000 ||  || 3000
-  13/03/2019 || 1000 ||  || 1000').to_stdout
+  13/03/2019 ||  || 500.00 || 2500.00
+  13/03/2019 || 2000.00 ||  || 3000.00
+  13/03/2019 || 1000.00 ||  || 1000.00').to_stdout
   end
 
 end

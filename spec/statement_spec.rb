@@ -7,7 +7,7 @@ RSpec.describe 'Statement' do
   it 'prints a statement in a specific format' do
     my_statement.print(my_account.transactions)
     expect output('date || credit || debit || balance
-  11/03/2019 || 100 ||  || 100').to_stdout
+  11/03/2019 || 100.00 ||  || 100.00').to_stdout
   end
 
 end
